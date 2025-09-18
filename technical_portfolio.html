@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aney Kanji - Technical Portfolio</title>
-  <link rel="stylesheet" href="style1.css">
+  <link rel="stylesheet" href="style1.css" id="page_style">
+  <script src="script.js"></script>
 </head>
 <body>
   <!-- Top-Left Corner -->
@@ -15,7 +16,7 @@
           <div class="title-block">
             <div class="title-row">
               <h1 class="site-title"><a href="index.html">Aney Kanji</a></h1>
-              <img class="site-gif" src="Image/Isaac_Gif_Cleaned.gif" alt="Isaac Animation">
+              <img class="site-gif" src="Image/Isaac_Logo_Gif.gif" alt="Isaac Animation">
             </div>
           </div>
         </header>
@@ -44,7 +45,7 @@
             <img class="icon" src="Image/TAMU_Email_Logo.png" alt="TAMU Email">
           </a>
           <a class="social" href="https://www.instagram.com/aney_kanji/" target="_blank" rel="noopener" aria-label="Instagram">
-            <img class="icon" src="Image/IG_Logo.jpg" alt="Instagram">
+            <img class="icon" src="Image/IG_Logo.png" alt="Instagram">
           </a>
         </nav>
       </div>
@@ -150,7 +151,7 @@
   <!-- Bottom-Right Corner -->
   <div class="corner">
     <div class="corner-bottomright">
-      <button class="hex-btn" aria-label="Change Theme">
+      <button class="hex-btn" aria-label="Change Theme" type="button" onclick="changeTheme()">
         <svg class="hex-svg" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <polygon class="hex-strap" points="70,15 330,15 360,-20 100,-20"></polygon>
           <polygon class="hex-main" points="70,15 330,15 385,100 330,185 70,185 15,100"></polygon>

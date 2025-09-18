@@ -262,6 +262,7 @@ a:focus-visible {
 }
 
 .boba-img {
+  background-color: #2f2f2f;
   width: 22vw;
   height: auto;
   max-width: none;
@@ -567,3 +568,46 @@ a:focus-visible {
   font: 400 14px/1.55 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; /* https://mantine.dev/theming/typography/ */
   resize: vertical;
 }
+
+
+
+
+
+
+/* === Unlock bottom UI to page bottom (not fixed to viewport) === */
+
+/* Make the page a positioning context for absolute children */
+body {
+  position: relative;
+  /* reserve space so content doesn't get covered by the bottom UI */
+}
+body::after {
+  content: "";
+  display: block;
+  /* leave room roughly equal to the slanted-nav height + hex button */
+  height: max(160px, calc(var(--tick-length, 170px) * 0.9));
+}
+
+/* Only change the BOTTOM corner widgets — leave top corners fixed */
+.corner-bottomleft,
+.corner-bottomright {
+  position: absolute;   /* was: fixed */
+  z-index: inherit;     /* keeps them above content, same as before */
+  padding: 12px;        /* preserve your original padding */
+}
+
+/* Keep their coordinates exactly the same as before */
+.corner-bottomleft {
+  left: 12px;
+  bottom: 22px;
+}
+
+.corner-bottomright {
+  right: 20px;
+  bottom: 22px;
+}
+
+
+
+
+
