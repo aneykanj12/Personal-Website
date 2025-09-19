@@ -337,8 +337,8 @@ a:focus-visible {
 }
 
 .cards {
-  width: min(92vw, 1100px);
-  transform: translateX(700px);
+  width: min(92vw, 1000px);
+  transform: translateX(575px);
   display: flex;
   flex-direction: column;
   gap: 42px;
@@ -447,16 +447,18 @@ a:focus-visible {
 .service {
   padding-top: 22vh;
   padding-bottom: 22vh;
+
 }
 
 .panel {
-  width: min(86vw, 900px);
+  width: min(86vw, 1000px);
   margin: 0 auto 42px auto;
   position: relative;
   background: var(--bg);
   border: 2px solid var(--text);
   border-radius: 6px;
   color: var(--text);
+  transform: translateX(125px);
 }
 
 .panel::after {
@@ -471,6 +473,7 @@ a:focus-visible {
 
 .panel-body {
   padding: clamp(18px, 2.2vw, 28px);
+  
 }
 
 .panel-title {
@@ -606,7 +609,6 @@ body::after {
   right: 20px;
   bottom: 22px;
 }
-
 
 
 
